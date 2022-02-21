@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery・セレクタ</title>
+    </head>
+    <body>
+        <div>
+            <h1 id="title">タイトル</h1>
+            <p class="message">こんにちは</p>
+        </div>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script>
+            const title = $('#title').text();
+            const list = $('.message').text();
+
+            console.log(title);
+            console.log(list);
+        </script>
+    </body>
+</html>

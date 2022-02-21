@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery・	属性フィルタ</title>
+    </head>
+    <body>
+        <ul>
+            <li class="list-test">項目1</li>
+            <li class="sample-list">項目2</li>
+            <li class="sample-text">項目3</li>
+        </ul>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script>
+            // class 属性値の先頭が「sample」の要素だけを抽出する
+            const text = $('li[class^="sample"]').text();
+
+            console.log(text);
+            
+        </script>
+    </body>
+</html>

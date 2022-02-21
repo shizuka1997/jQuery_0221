@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery・addition・追加</title>
+    </head>
+    <body>
+
+        <ul>
+            <li>Python</li>
+            <li>Ruby</li>
+            <li>PHP</li>
+        </ul>
+
+        <script src="jquery-3.6.0.min.js"></script>
+
+        <script>
+
+            const list = $('<li>',{
+                text: 'JavaScript'
+            });
+
+            // 生成したHTML要素を画面に表示する
+            $('ul').append(list);
+
+        </script>
+    </body>
+</html>

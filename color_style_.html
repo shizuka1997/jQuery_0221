@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery・色分け</title>
+
+        <style>
+            .red {
+                color: red;
+            }
+            .green {
+                color: green;
+            }
+            .blue {
+                color: blue;
+            }
+        </style>
+
+    </head>
+    <body>
+        <ul>
+            <li id="1">サンプルリスト</li>
+            <li id="2">サンプルリスト</li>
+            <li id="3">サンプルリスト</li>
+        </ul>
+
+        <script src="jquery-3.6.0.min.js"></script>
+
+        <script>
+            $('#1').addClass('red');
+            $('#2').addClass('green');
+            $('#3').addClass('blue');
+        </script>
+
+    </body>
+</html>

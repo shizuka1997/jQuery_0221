@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery・event・イイね！</title>
+    </head>
+    <body>
+        <button>イイね！</button>
+        <div></div>
+
+        <script src="jquery-3.6.0.min.js"></script>
+
+        <script>
+            $('button').on('click', () => {
+                $('div').text('ありがとう ございます！！');
+            })
+        </script>
+    </body>
+</html>
