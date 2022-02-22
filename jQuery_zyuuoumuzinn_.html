@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery・アニメーション・縦横無尽</title>
+        <style>
+            h1 {
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="text">テキスト</h1>
+
+        <script src="jquery-3.6.0.min.js"></script>
+
+        <script>
+            // ここに jQuery を記述する
+
+            $('#text')
+            .animate({left: '90%'}, 1000)
+            .animate({left: '40%'}, 1500)
+            .animate({fontSize: '8em'}, 500)
+            .animate({left: '60%',top: '40%'}, 300)
+            .animate({left: 0,top: 0,fontSize: '1em'}, 1000)
+
+        </script>
+    </body>
+
+</html>

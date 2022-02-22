@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery・アニメーション・癒される動物といえば？</title>
+        <style>
+            img {
+                width: 10px;
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>癒される動物といえば？</h1><br>
+        <button>答え</button>
+        <div>
+            <img src="Capybara_02.jpg"/>
+        </div>
+
+        <script src="jquery-3.6.0.min.js"></script>
+
+        <script>
+            $('button').on('click', () => {
+                $('img').animate({
+                    opacity: 1,
+                    width: 400,
+                }, 1000);
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery・アンケートフォーム</title>
+    </head>
+    <body>
+        <form>
+            <p>
+                名前：
+                <input type="text" name="username">
+
+            </p>
+            <p>
+                性別：
+                <input type="radio" name="gender" value="male">男
+                <input type="radio" name="gender" value="female">女
+            </p>
+            <p>
+                趣味：
+                <input type="checkbox" name="hobby" value="book">読書
+                <input type="checkbox" name="hobby" value="music">音楽
+                <input type="checkbox" name="hobby" value="movie">映画
+                <input type="checkbox" name="hobby" value="walk">散歩
+            </p>
+            <p>
+                <input type="button" name="button" value="確認">
+            </p>
+        </form>
+
+        <script src="jquery-3.6.0.min.js"></script>
+
+        <script>
+            $('[type="button"]').click(() => {
+                const name = $('[name="username"]').val();
+                const gender = $('[name="gender"]:checked').val();
+                console.log(name);
+                console.log(gender);
+
+                $('[name="hobby"]:checked').each(function() {
+                    console.log($(this).val());
+                })
+            })
+        </script>
+    </body>
+</html>
