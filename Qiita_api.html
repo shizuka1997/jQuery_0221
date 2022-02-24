@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Qiita・API</title>
+    </head>
+    <body>
+        <input id="target" type="text"/>
+        <button>取得</button>
+        <ul></ul>
+
+        <script src="jquery-3.6.0.min.js"></script>
+
+        <script>
+            // ここに jQuery を記述する
+
+            const url = 'https://qiita.com/api/v2/tags/';
+
+            $('button').on('click', () => {
+                $.ajax({
+                    url:url + $('#target').val() + '/items',
+                    dataType:"json",
+                }).done(data => {
+
+                    $('ul').empty(); // ul要素の中身を空にする
+                    $.each(data, (index, value) => {
+                        const elements = `<a href=${value.url}><li>${value.title}</li></a>`;
+                        $('ul').append(elements);
+                    })
+                })
+            })
+        </script>
+    </body>
+</html>
