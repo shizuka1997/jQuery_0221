@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8"/>
+        <title>スライドショー</title>
+        <style>
+            /* ここにCSSを記述する */
+
+            body {
+                text-align:center;
+            }
+            #slide img{
+                margin: auto;
+                display: none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="slide">
+            <!-- スライドショーで使う複数の画像を配置する -->
+
+            <img src="No_3.jpg">
+            <img src="No_2.jpg">
+            <img src="No_1.jpg">
+            <img src="firework_01.jpg">
+
+        </div>
+        <button id="rev">前へ</button>
+        <button id="next">次へ</button>
+
+        <script src="jquery-3.6.0.min.js"></script>
+
+        <script>
+            // ここに jQuery を記述する
+            const images = $('#slide img');
+            let counter = 0;
+            let index = 0;
+
+            // 最初の画像だけ表示させる
+            images.eq(index).show();
+
+            $('#next').click(() => {
+                //「次へ」ボタンをクリックしたときの処理
+                images.eq(index).hide();
+
+            // 次の画像のインデックス番号を取得する
+            index = ++counter % images.length;
+
+            // 次の画像を表示する
+            images.eq(index).fadeIn();
+            })
+
+            $('#rev').click(() => {
+                //「前へ」ボタンをクリックしたときの処理
+                images.eq(index).hide();
+                index = --counter % images.length;
+                images.eq(index).fadeIn();
+            })
+
+        </script>
+    </body>
+</html>
