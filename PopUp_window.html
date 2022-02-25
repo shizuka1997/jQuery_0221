@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8"/>
+        <title>ポップアップ</title>
+        <style>
+            /* ここにCSSを記述する */
+
+            /* ポップアップウィンドウの背景 */
+            .popup {
+                /*メッセージのコンテンツを中央に配置する*/
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                /* 半透明の黒背景にする */
+                height: 100vh;
+                width: 100%;
+                background: rgba(0,0,0,0.6);
+
+                /* 画面がスクロールしないように固定する */
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+
+            /* メッセージのコンテンツ部分 */
+            .content {
+                background: rgba(255,255,255,1);
+                padding: 30px;
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="open">表示</button>
+        <div class="popup">
+            <div class="content">
+                <p>これはポップアップウィンドウです。「閉じる」ボタンでウィンドウが閉じます</p>
+                <button id="close">閉じる</button>
+            </div>
+        </div>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script>
+            // ここに jQuery を記述する
+
+            // 最初はポップアップウィンドウを非表示にしておく
+            $('.popup').hide();
+            $('#open').on('click', () => {
+                // ポップアップウィンドウを開く処理
+                $('.popup').fadeIn();
+            });
+
+            $('#close').on('click', () => {
+                // ポップアップウィンドウを閉じる処理
+                $('.popup').fadeOut();
+            });
+        </script>
+    </body>
+</html>
