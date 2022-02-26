@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>銀行・支店名</title>
+    </head>
+    <body>
+        <h3>銀行・支店名</h3>
+        <div>
+            <p>
+                <label>銀行名<input id="bankName" type="text" size="10" maxlength="8"></label>
+                <button id="search">検索</button>
+            </p>
+            <p>
+                <label>銀行コード<span id ="bankcode"></span></label>
+            </p>
+            <p>
+                <label>ふりがな<input id="hurigana" type="text" size="10"></label>
+            </p>
+            <p>
+                <label>支店名 <input id="branchName" type="text" size="10"></label>
+                <button id="branchsearch">検索</button>
+            </p>
+            <p>
+                <label>支店コード<span id ="branchcode"></span></label>
+            </p>
+        </div>
+
+        <script src="jquery-3.6.0.min.js"></script>
+        <script src="bank_sample.js"></script>
+
+    </body>
+</html>
